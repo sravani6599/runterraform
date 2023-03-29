@@ -1,0 +1,53 @@
+>>know about --how to work with shell script
+             --What is bit bucket and how to work with bit bucket 
+                and creating users in bit bucket
+                and How to assigne read&write options to the bit bucket
+
+
+>>Using shell script--How to authenticate the bitbucket 
+                    --How to create users in bit bucket
+
+
+
+
+
+
+# to install aws cli #
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+
+#Install git in your EC2 instance
+sudo yum install git -y
+
+#Check git version
+git version
+
+# to install all the java
+ yum install java-1.8.0-openjdk-devel
+
+# to install bitbucket#
+ wget https://www.atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-8.3.0-x64.bin
+#to change the mode
+chmod +x atlassian-bitbucket-8.3.0-x64.bin
+ls -ltrh
+./atlassian-bitbucket-8.3.0-x64.bin
+
+#to install,start,enable the firewall
+>sudo yum install firewalld
+> sudo systemctl start firewalld
+> sudo systemctl enable firewalld
+> sudo systemctl status firewalld
+>  systemctl stop firewalld
+> setenforce 0
+> ifconfig
+
+# to check status of bitbucket
+service atlbitbucket status
+# to start bitbucket
+ service atlbitbucket start
+
+
+https://www.atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-8.3.0-x64.bin
+                    
