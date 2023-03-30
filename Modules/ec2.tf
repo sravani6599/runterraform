@@ -31,6 +31,9 @@ resource "aws_instance" "devserver" {
         }
 
     security_groups= ["${aws_security_group.ALLTRAFFIC.name}"]  
+    tags = {
+    tag-key = "tag-value"
+  }
     
     assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -46,9 +49,7 @@ resource "aws_instance" "devserver" {
     ]
   })
 
-  tags = {
-    tag-key = "tag-value"
-  }
+  
 }
 
     
