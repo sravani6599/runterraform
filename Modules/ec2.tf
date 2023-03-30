@@ -40,7 +40,31 @@ resource "aws_instance" "devserver" {
   
 }
 
-    
+   //Role
+resource "aws_iam_role" "web_iam_role" {
+    name = "web_iam_role"
+    assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Action": "sts:AssumeRole",
+      "Principal": {
+        "Service": "ec2.amazonaws.com"
+      },
+      "Effect": "Allow",
+      "Sid": ""
+    }
+  ]
+}
+EOF
+}
+
+//Instance Profile
+resource "aws_iam_instance_profile" "web_instance_profile" {
+    name = "web_instance_profile"
+    role = "web_iam_role"
+} 
 
 
 
