@@ -32,19 +32,7 @@ resource "aws_instance" "devserver" {
 
     security_groups= ["${aws_security_group.ALLTRAFFIC.name}"]  
 
-    assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = "sts:AssumeRole"
-        Effect = "Allow"
-        Sid    = ""
-        Principal = {
-          Service = "ec2.amazonaws.com"
-        }
-      },
-    ]
-  })
+    
 
    
     
