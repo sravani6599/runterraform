@@ -31,9 +31,7 @@ resource "aws_instance" "devserver" {
         }
 
     security_groups= ["${aws_security_group.ALLTRAFFIC.name}"]  
-    tags = {
-    tag-key = "tag-value"
-  }
+   
     
     
   
